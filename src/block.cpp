@@ -25,4 +25,21 @@ std::vector<Position> Block::GetCellPosition(){
         Position newPos=Position(item.row + rowOffset, item.column+columnOffset);
         moveTiles.push_back(newPos);
     }
+    return moveTiles;
+}
+
+void Block::Rotate()
+{
+    rotationState ++;
+    if(rotationState== (int)cells.size()){
+        rotationState=0;
+    }
+}
+
+void Block::UndoRotation()
+{
+    rotationState --;
+    if(rotationState== -1){
+        rotationState = cells.size() -1;
+    }
 }
