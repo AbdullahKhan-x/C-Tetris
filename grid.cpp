@@ -1,12 +1,11 @@
 #include "grid.h"
 #include <iostream>
-#include "colors.h"
-
+#include"colors.h"
 Grid::Grid()
 {
-    numRows=20;
-    numCols=10;
-    cellSize=30;
+    numRows = 20;
+    numCols = 10;
+    cellSize = 30;
     Initialize();
     colors = GetCellColors();
 }
@@ -38,3 +37,4 @@ void Grid::Draw(){
         }
     }
 }
+
